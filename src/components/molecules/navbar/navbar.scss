@@ -1,0 +1,10 @@
+@import "../../../sass/variables";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  gap: 1.3rem;
+}
