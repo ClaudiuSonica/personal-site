@@ -1,2 +1,19 @@
 @import "../../../sass/variables";
 
+
+.tech-stack {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 1.5rem;
+
+  &--item {
+    width: 3.5rem;
+    
+    &:is(:not(:first-child)) {
+      margin-right: 2rem;
+    }
+  }
+}

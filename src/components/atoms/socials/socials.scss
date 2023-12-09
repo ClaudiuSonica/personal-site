@@ -1,2 +1,9 @@
 @import "../../../sass/variables";
 
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 5rem;
+}

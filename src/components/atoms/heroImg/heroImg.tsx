@@ -1,12 +1,11 @@
 import "./heroImg.scss";
-import blob from "/assets/blob.svg";
 
 const HeroImg = () => {
   return (
-    <div className="hero-img">
-      {blob}
+    <div className="blob">
+      <img src="/assets/profile.jpeg" alt="profile picture" className="blob-img" />
     </div>
-  )
-}
+  );
+};
 
 export default HeroImg;

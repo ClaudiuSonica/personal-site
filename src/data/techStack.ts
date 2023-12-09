@@ -39,13 +39,13 @@ export const techStack = {
     },
     {
       id: uuidv4(),
-      name: "Redux",
-      icon: redux,
+      name: "Sass",
+      icon: sass,
     },
     {
       id: uuidv4(),
-      name: "Sass",
-      icon: sass,
+      name: "Redux",
+      icon: redux,
     },
     {
       id: uuidv4(),
