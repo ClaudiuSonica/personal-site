@@ -6,22 +6,22 @@ export const navLinks = {
     {
       id: uuidv4(),
       name: "Home",
-      link: "/"
+      link: "/#home"
     },
     {
       id: uuidv4(),
       name: "About",
-      link: "/about"
+      link: "/#about"
     },
     {
       id: uuidv4(),
       name: "Projects",
-      link: "/projects"
+      link: "/#projects"
     },
     {
       id: uuidv4(),
       name: "Contact",
-      link: "/contact"
+      link: "/#contact"
     }
   ]
 }

@@ -1,13 +1,17 @@
-import { BrowserRouter } from "react-router-dom";
-import { Header } from "./components/organisms/header/header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header  from "./components/organisms/header/header";
+import Hero from "./components/organisms/hero/hero";
 
 const App = () => {
   return (
-    <div>
+    <>
       <BrowserRouter>
-        <Header />
+        <Routes>
+          <Route index path="/" element={<Header />} />
+          <Route path="/home" element={<Hero />} />
+        </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 };
 

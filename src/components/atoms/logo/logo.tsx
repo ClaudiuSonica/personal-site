@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import "./logo.scss";
 
 export const Logo = () => {
   return (
-    <div className="logo">
-      <span className="logo--name">soni</span>
-      <span className="logo--symbol">X</span>
-    </div>
+    <Link to="/">
+      <div className="logo">
+        <span className="logo--name">soni</span>
+        <span className="logo--symbol">X</span>
+      </div>
+    </Link>
   );
 };
 
