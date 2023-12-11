@@ -1,0 +1,54 @@
+@import "../../../sass/variables";
+
+.about-img {
+  position: relative;
+  display: inline-block;
+
+  & img {
+    border-radius: 1.5rem;
+    vertical-align: middle;
+  }
+
+  .circle-text {
+    position: absolute;
+    bottom: -3rem; 
+    right: -3rem; 
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 3px;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: spin 50s linear infinite;
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    text {
+      fill: $black;
+    }
+  }
+
+  &::before {
+    content: '🧑‍💻';
+    font-size: 5rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 10;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

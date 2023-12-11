@@ -1,0 +1,11 @@
+@import "../../../sass/variables";
+
+.page-title {
+  h2 {
+    font-size: 2rem;
+    font-family: $ff-text;
+    color: $blue;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

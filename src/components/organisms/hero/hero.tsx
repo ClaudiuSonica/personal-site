@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="hero--section__main">
           <div className="hero--section__details">
             <MainTitle />
-            <Description />
+            <Description className="description" />
             <Socials />
           </div>
           <div className="hero--section__img">

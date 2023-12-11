@@ -1,0 +1,10 @@
+@import "../../../sass/variables";
+
+.about-description {
+  font-family: $ff-text;
+  font-size: 1.5rem;
+  width: 45ch;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $gray;
+}
