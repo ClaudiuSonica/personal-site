@@ -14,7 +14,7 @@
   }
 
   &__img {
-    width: 30%;
+    width: 40%;
   }
 
   &__details {
@@ -22,10 +22,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 1.3rem;
+    gap: 1rem;
     width: 30%;
-
-
   }
 
   &::after {
