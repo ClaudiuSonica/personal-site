@@ -1,0 +1,84 @@
+@import "../../../sass/variables";
+
+.contact-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-inline: auto;
+  padding-inline: 20%;
+  padding-block: 5%;
+  gap: 5rem;
+  overflow: hidden;
+  height: 100vh;
+
+  & .contact-wrapper--header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  & .contact-wrapper--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10rem;
+    width: 100%;
+    height: 100vh;
+
+    &--details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-inline: 10%;
+
+      & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        & img {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+
+        & div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 0.5rem;
+
+          & p:is(:first-child) {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+
+          & p:is(:last-child) {
+            color: $gray;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to top, rgba(250, 0, 0, 0.12), transparent);
+    pointer-events: none;
+    z-index: -10;
+    backdrop-filter: blur(5px);
+  }
+}

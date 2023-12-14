@@ -13,6 +13,14 @@
   overflow: hidden;
   height: 100vh;
 
+  & .projects--header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   & .projects--content {
     overflow-y: scroll;
     display: flex;
