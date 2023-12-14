@@ -1,0 +1,43 @@
+@import "../../../sass/variables";
+
+.portfolio-projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-inline: auto;
+  padding-inline: 20%;
+  padding-block: 5%;
+  gap: 2rem;
+  overflow: hidden;
+  height: 100vh;
+
+  & .projects--content {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & > * {
+      scroll-snap-align: start;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to top, rgba(250, 0, 0, 0.12), transparent);
+    pointer-events: none;
+    z-index: -10;
+    backdrop-filter: blur(5px);
+  }
+}

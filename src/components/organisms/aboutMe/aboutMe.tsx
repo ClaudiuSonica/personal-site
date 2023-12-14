@@ -13,7 +13,10 @@ const AboutMe = () => {
         </div>
         <div className="about--section__details">
           <PageTitle title="About Me" />
-          <Description className="aboutMe-description" />
+          <Description
+            className="aboutMe-description"
+            text="Hello. I'm Claudiu Sonica. An self-taught ambitious Front-End Developer based in Mures, Romania. 📌"
+          />
           <AboutDescription />
         </div>
       </div>

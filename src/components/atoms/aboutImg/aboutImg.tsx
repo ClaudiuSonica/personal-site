@@ -9,7 +9,7 @@ const AboutImg = () => {
           <path
             id="circlePath"
             fill="none"
-            stroke-width="4"
+            strokeWidth="4"
             d="
           M 10, 50
           a 40,40 0 1,1 80,0
@@ -18,9 +18,9 @@ const AboutImg = () => {
           />
           <text
             id="text"
-            font-family="monospace"
-            font-size="12"
-            font-weight="bold"
+            fontFamily="monospace"
+            fontSize="12"
+            fontWeight="bold"
             fill="$000">
             <textPath id="textPath" href="#circlePath">FRONT-END WEB DEVELOPMENT</textPath>
           </text>

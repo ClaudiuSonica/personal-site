@@ -2,12 +2,13 @@ import "./description.scss";
 
 interface DescriptionProps {
   className?: string;
+  text: string;
 }
 
-const Description: React.FC<DescriptionProps> = ({className}) => {
+const Description: React.FC<DescriptionProps> = ({className, text}) => {
   return (
     <div className={className}>
-      <p>Hello. I'm Claudiu Sonica. An self-taught ambitious Front-End Developer based in Mures, Romania. 📌</p>
+      <p>{text}</p>
     </div>
   )
 }

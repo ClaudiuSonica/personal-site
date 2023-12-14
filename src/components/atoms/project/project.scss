@@ -1,0 +1,81 @@
+@import "../../../sass/variables";
+
+.project-details--item {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 4rem;
+  height: 65vh;
+  overflow: hidden;
+
+  &__img {
+    flex: 1;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%; 
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $gray;
+      text-align: center;
+    }
+
+    &--tech {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      span {
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+    }
+
+    &--links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      a {
+        font-size: 1.3rem;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header  from "./components/organisms/header/header";
-import Hero from "./components/organisms/hero/hero";
-import AboutMe from "./components/organisms/aboutMe/aboutMe";
+import Home from "./components/pages/home/home";
+import About from "./components/pages/about/about";
+import Projects from "./components/pages/projects/projects";
 
 const App = () => {
   return (
@@ -9,8 +10,9 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route index path="/" element={<Hero />} />
-          <Route path="/about" element={<AboutMe />} />
+          <Route index path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -12,7 +12,10 @@ const Hero = () => {
         <div className="hero--section__main">
           <div className="hero--section__details">
             <MainTitle />
-            <Description className="description" />
+            <Description
+              className="description"
+              text="Hello. I'm Claudiu Sonica. An self-taught ambitious Front-End Developer based in Mures, Romania. 📌"
+            />
             <Socials />
           </div>
           <div className="hero--section__img">
