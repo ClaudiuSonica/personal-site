@@ -1,6 +1,6 @@
 @import "../../../sass/variables";
 
-form {
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,43 +8,56 @@ form {
   gap: 2rem;
   width: 40rem;
 
-  input {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
-    background-color: $lightgray;
-    border-radius: .5rem;
-    padding: 1rem;
-    font-size: 1.5rem;
-    color: $black;
 
-    &::placeholder {
-      color: $gray;
+    input {
+      width: 100%;
+      background-color: $lightgray;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+      color: $black;
+
+      &::placeholder {
+        color: $gray;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
 
-    &:focus {
-      outline: none;
+    textarea {
+      width: 100%;
+      background-color: $lightgray;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+      color: $black;
+
+      &::placeholder {
+        color: $gray;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
-  }
 
-  textarea {
-    width: 100%;
-    background-color: $lightgray;
-    border-radius: .5rem;
-    padding: 1rem;
-    font-size: 1.5rem;
-    color: $black;
-
-    &::placeholder {
-      color: $gray;
-    }
-
-    &:focus {
-      outline: none;
+    .error {
+      color: red;
     }
   }
 
   button {
     background-color: $lightgray;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     padding: 1rem;
     font-size: 1.5rem;
     color: $black;
