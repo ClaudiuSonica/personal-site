@@ -1,6 +1,6 @@
 @import "../../../sass/variables";
 
-.contact-form {
+form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,12 +8,12 @@
   gap: 2rem;
   width: 40rem;
 
-  .form-group {
+  .form-field {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
 
     input {
@@ -50,8 +50,9 @@
       }
     }
 
-    .error {
+    .error-message {
       color: red;
+      font-size: 1rem;
     }
   }
 

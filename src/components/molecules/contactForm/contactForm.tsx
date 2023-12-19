@@ -1,73 +1,129 @@
-import validationSchema from "../../../utils/functions/validationSchema";
+import { useState } from "react";
 import "./contactForm.scss";
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
+import validationSchema from "../../../utils/functions/validationSchema";
+import * as Yup from "yup";
 
-const ContactForm: React.FC = () => {
-  const initialValues = {
-    Name: "",
-    Email: "",
-    Subject: "",
-    Message: "",
+interface FormValues {
+  Name: string;
+  Email: string;
+  Subject: string;
+  Message: string;
+}
+
+const initialFormData: FormValues = {
+  Name: "",
+  Email: "",
+  Subject: "",
+  Message: "",
+};
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState<FormValues>(initialFormData);
+  const [formErrors, setFormErrors] = useState<Partial<FormValues>>({});
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    try {
+      await validationSchema.validate(formData, { abortEarly: false });
+      setFormErrors({ Name: "", Email: "", Subject: "", Message: "" });
+    } catch (error) {
+      if (error instanceof Yup.ValidationError) {
+        const newErrors: Partial<FormValues> = {};
+        error.inner.forEach((err) => {
+          if (err.path) {
+            newErrors[err.path as keyof FormValues] = err.message;
+          }
+        });
+        setFormErrors(newErrors);
+      }
+    }
   };
 
-  const handleSubmit = (
-    values: typeof initialValues,
-    { setSubmitting }: FormikHelpers<typeof initialValues>
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    // Handle form submission here
-    console.log(values);
-    setSubmitting(false);
+    const { name, value } = e.target;
+    let updatedValue = value;
+
+    if (name !== "Email") {
+      updatedValue = value.replace(/\b\w/g, (char: string) =>
+        char.toUpperCase()
+      );
+    }
+
+    setFormData((prevValues) => ({
+      ...prevValues,
+      [name]: updatedValue,
+    }));
+
+    if (value.trim() !== "") {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: "",
+      }));
+    }
   };
+
+  const { Name, Email, Subject, Message } = formData;
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}>
-      {({ isSubmitting }) => (
-        <Form className="contact-form">
-          <div className="form-group">
-            <Field
-              type="text"
-              name="Name"
-              placeholder="Name"
-              className="form-control"
-            />
-            <ErrorMessage name="Name" component="div" className="error" />
-          </div>
-          <div className="form-group">
-            <Field
-              type="email"
-              name="Email"
-              placeholder="Email"
-              className="form-control"
-            />
-            <ErrorMessage name="Email" component="div" className="error" />
-          </div>
-          <div className="form-group">
-            <Field
-              type="text"
-              name="Subject"
-              placeholder="Subject"
-              className="form-control"
-            />
-            <ErrorMessage name="Subject" component="div" className="error" />
-          </div>
-          <div className="form-group">
-            <Field
-              as="textarea"
-              name="Message"
-              placeholder="Message"
-              className="form-control"
-            />
-            <ErrorMessage name="Message" component="div" className="error" />
-          </div>
-          <button type="submit" disabled={isSubmitting} className="submit-btn">
-            Send message
-          </button>
-        </Form>
-      )}
-    </Formik>
+    <form onSubmit={handleSubmit}>
+      <div className="form-field">
+        <input
+          type="text"
+          placeholder="Name"
+          id="name"
+          name="Name"
+          onChange={handleChange}
+          value={Name}
+          autoComplete="off"
+        />
+        {formErrors.Name && <p className="error-message">{formErrors.Name}</p>}
+      </div>
+      <div className="form-field">
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          name="Email"
+          onChange={handleChange}
+          value={Email}
+          autoComplete="off"
+        />
+        {formErrors.Email && (
+          <p className="error-message">{formErrors.Email}</p>
+        )}
+      </div>
+      <div className="form-field">
+        <input
+          type="text"
+          placeholder="Subject"
+          id="subject"
+          name="Subject"
+          onChange={handleChange}
+          value={Subject}
+          autoComplete="off"
+        />
+        {formErrors.Subject && (
+          <p className="error-message">{formErrors.Subject}</p>
+        )}
+      </div>
+      <div className="form-field">
+        <textarea
+          placeholder="Message"
+          id="message"
+          name="Message"
+          onChange={handleChange}
+          value={Message}
+          autoComplete="off"
+        />
+        {formErrors.Message && (
+          <p className="error-message">{formErrors.Message}</p>
+        )}
+      </div>
+      <button type="submit">Get in touch!</button>
+    </form>
   );
 };
 
