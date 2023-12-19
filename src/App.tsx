@@ -4,6 +4,7 @@ import Home from "./components/pages/home/home";
 import About from "./components/pages/about/about";
 import Projects from "./components/pages/projects/projects";
 import Contact from "./components/pages/contact/contact";
+import PageNotFound from "./components/pages/pageNotFound/pageNotFound";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </>
