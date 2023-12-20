@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./pageNotFound.scss";
 
 const PageNotFound = () => {
@@ -12,7 +11,7 @@ const PageNotFound = () => {
         </div>
         <h1>oops!</h1>
         <h2>Error 404 : Page Not Found</h2>
-        <Link to="/">Go home</Link>
+        <a href="#home">Go Home</a>
       </div>
     </div>
   );

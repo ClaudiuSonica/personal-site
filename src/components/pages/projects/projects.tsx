@@ -2,9 +2,9 @@ import PortfolioProjects from "../../organisms/portfolioProjects/portfolioProjec
 
 const Projects = () => {
   return (
-    <>
+    <div id="projects">
       <PortfolioProjects />
-    </>
+    </div>
   );
 };
 
