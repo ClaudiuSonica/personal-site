@@ -22,7 +22,7 @@ const App = () => {
     };
   }, []);
 
-  const pathNames = ["#home", "#about", "#projects", "#contact"];
+  const pathNames = ["","#home", "#about", "#projects", "#contact"];
 
   return (
     <>
