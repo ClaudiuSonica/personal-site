@@ -7,5 +7,17 @@
     color: $blue;
     text-transform: uppercase;
     font-weight: bold;
+
+    @media (max-width: $lg) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: $md) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 1.4rem;
+    }
   }
 }

@@ -8,6 +8,11 @@
   height: 65vh;
   overflow: hidden;
 
+  @media (max-width: $md) {
+    flex-direction: column;
+    height: auto;
+  }
+
   &__img {
     flex: 1;
     max-width: 50%;
@@ -15,6 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: $md) {
+      max-width: 100%;
+    }
 
     img {
       max-width: 100%;
@@ -33,48 +42,24 @@
     justify-content: center;
     gap: 2rem;
 
+    @media (max-width: $md) {
+      max-width: 100%;
+    }
+
     h3 {
       font-size: 2rem;
       font-weight: 900;
-    }
 
-    p {
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: $gray;
-      text-align: center;
-    }
-
-    &--tech {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-
-      span {
-        font-size: 1.5rem;
-        font-weight: 900;
+      @media (max-width: $lg) {
+        font-size: 1.8rem;
       }
-    }
 
-    &--links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
+      @media (max-width: $md) {
+        font-size: 1.6rem;
+      }
 
-      a {
-        font-size: 1.3rem;
-        font-weight: 900;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-
-        img {
-          width: 20px;
-        }
+      @media (max-width: $sm) {
+        font-size: 1.4rem;
       }
     }
   }

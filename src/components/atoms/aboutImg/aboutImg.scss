@@ -4,6 +4,19 @@
   position: relative;
   display: inline-block;
 
+  @media (max-width: $lg) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $md) {
+    width: 85%;
+  }
+
+  @media (max-width: $sm) {
+    width: 100%;
+  }
+
   & img {
     border-radius: 1.5rem;
     vertical-align: middle;
@@ -11,8 +24,8 @@
 
   .circle-text {
     position: absolute;
-    bottom: -3rem; 
-    right: -3rem; 
+    bottom: -3rem;
+    right: -3rem;
     font-size: 2rem;
     width: 150px;
     text-align: center;
@@ -22,6 +35,18 @@
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: spin 50s linear infinite;
+
+    @media (max-width: $md) {
+      font-size: 1.5rem;
+      width: 120px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 1.2rem;
+      width: 100px;
+      bottom: -2rem;
+      right: -1.5rem;
+    }
 
     svg {
       width: 100%;
@@ -34,13 +59,30 @@
     }
   }
 
+
   &::before {
-    content: '🧑‍💻';
+    content: "🧑‍💻";
     font-size: 5rem;
     position: absolute;
     bottom: 2rem;
     right: 1rem;
     z-index: 10;
+  }
+
+  @media (max-width: $md) {
+    &::before {
+      font-size: 4rem;
+      bottom: 1.5rem;
+      right: 0.5rem;
+    }
+  }
+  
+  @media (max-width: $sm) {
+    &::before {
+      font-size: 3rem;
+      bottom: 1rem;
+      right: 1.5rem;
+    }
   }
 }
 

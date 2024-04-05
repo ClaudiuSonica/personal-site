@@ -7,4 +7,12 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+
+  @media (max-width: $md) {
+    padding-inline: 2%;
+  }
+
+  @media (max-width: $sm) {
+    padding-inline: 1%;
+  }
 }

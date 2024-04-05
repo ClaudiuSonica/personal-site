@@ -8,10 +8,34 @@
   font-family: $ff-text;
   font-weight: bold;
   width: 45ch;
+
+  @media (max-width: $lg) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: $md) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 1.4rem;
+  }
 }
 
 .aboutMe-description {
   font-weight: bold;
   font-size: 2.2rem;
   font-family: $ff-text;
+
+  @media (max-width: $lg) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: $md) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 1.6rem;
+  }
 }

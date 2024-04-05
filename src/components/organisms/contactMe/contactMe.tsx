@@ -41,10 +41,10 @@ const ContactMe = () => {
             </div>
           </div>
         </div>
+      </div>
         <div className="contact-wrapper--content__form">
           <ContactForm />
         </div>
-      </div>
     </div>
   );
 };

@@ -1,20 +1,37 @@
-@import "../../../sass/variables";
+@import '../../../sass/variables';
 
 .about--section {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  padding-inline: 5%;
+
+  @media (max-width: $md) {
+    height: auto;
+    padding-block: 2rem;
+  }
 
   &__wrapper {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 7rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__img {
     max-width: 450px;
     height: 300px;
+
+    @media (max-width: $md) {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   &__details {
@@ -26,5 +43,11 @@
     width: 30%;
     max-width: 520px;
     height: 300px;
+
+    @media (max-width: $md) {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

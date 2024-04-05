@@ -4,11 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: $padding-inline;
+  padding-inline: 5%;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background-color: $white;
   cursor: pointer;
+
+  @media (max-width: $sm) {
+    position: static;
+  }
 }
