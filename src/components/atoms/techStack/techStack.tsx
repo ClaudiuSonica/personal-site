@@ -8,7 +8,7 @@ const TechStack = () => {
     <div className="tech-stack">
       <span>Tech Stack</span><span>|</span>
       {stack.map((stack) => (
-        <img className="tech-stack--item" src={stack.icon} alt={stack.name} key={stack.id} />
+        <img className="tech-stack--item" src={stack.icon} alt={stack.name} key={stack.id} title={stack.name} />
       ))}
     </div>
   );
