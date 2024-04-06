@@ -12,6 +12,11 @@
   overflow: hidden;
   height: 100vh;
 
+  @media (max-width: $sm) {
+    padding-top: 7%;
+    height: auto;
+  }
+
   & .projects--header {
     display: flex;
     flex-direction: column;

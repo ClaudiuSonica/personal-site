@@ -4,19 +4,6 @@
   position: relative;
   display: inline-block;
 
-  @media (max-width: $lg) {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  @media (max-width: $md) {
-    width: 85%;
-  }
-
-  @media (max-width: $sm) {
-    width: 100%;
-  }
-
   & img {
     border-radius: 1.5rem;
     vertical-align: middle;

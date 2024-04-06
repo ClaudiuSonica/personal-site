@@ -11,7 +11,7 @@
   border: 4px solid black;
   animation: blobAnimation 12s infinite linear alternate;
 
-  @media (max-width: $sm) {
+  @media (max-width: $md) {
     display: none;
   }
 }

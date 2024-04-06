@@ -6,6 +6,7 @@ import Projects from "./components/pages/projects/projects";
 import Contact from "./components/pages/contact/contact";
 import { useEffect, useState } from "react";
 import PageNotFound from "./components/pages/pageNotFound/pageNotFound";
+import Footer from "./components/organisms/footer/footer";
 
 const App = () => {
   const [currentPath, setCurrentPath] = useState(window.location.hash);
@@ -35,6 +36,7 @@ const App = () => {
               <About />
               <Projects />
               <Contact />
+              <Footer />
             </>
           ) : (
             <PageNotFound />
