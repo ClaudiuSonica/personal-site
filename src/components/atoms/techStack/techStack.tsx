@@ -1,14 +1,18 @@
 import { techStack } from "../../../data/techStack";
 import { MotionConfig, motion } from "framer-motion";
 import "./techStack.scss";
+import { useContext } from "react";
+import { ThemeContext } from "../../../utils/context/themeContext";
 
 const TechStack = () => {
   const { stack } = techStack;
 
   const duplicateStack = [...stack, ...stack, ...stack, ...stack, ...stack];
 
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <div className="tech-stack--container">
+    <div className={`tech-stack--container ${theme}`}>
       <span className="tech-stack--text">Tech Stack |</span>
       <MotionConfig transition={{ duration: 0 }}>
         <motion.div

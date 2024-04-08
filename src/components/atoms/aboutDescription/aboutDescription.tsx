@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../utils/context/themeContext";
 import "./aboutDescription.scss";
 
 const AboutDescription = () => {
+
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <div className="about-description">
+    <div className={`about-description ${theme}`}>
       <p>
         As a versatile Front End Developer proficient in JavaScript, React,
         TypeScript, SCSS, and Tailwind, I bring a passion for crafting engaging

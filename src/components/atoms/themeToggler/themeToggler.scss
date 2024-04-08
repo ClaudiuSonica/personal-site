@@ -1,0 +1,93 @@
+@import "../../../sass/variables";
+
+.theme-toggler {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Smaller width */
+  height: 24px; /* Smaller height */
+}
+
+.theme-toggler input {
+  display: none;
+}
+
+.theme-toggler-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $gray;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.theme-toggler-label:before {
+  position: absolute;
+  content: "";
+  height: 20px; 
+  width: 20px;
+  left: 2px; /* Adjusted left position */
+  bottom: 2px; /* Adjusted bottom position */
+  background-color: $lightgray;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.theme-toggler input:checked + .theme-toggler-label {
+  background-color: $lightblue;
+}
+
+.theme-toggler input:focus + .theme-toggler-label {
+  box-shadow: 0 0 1px $lightblue; 
+}
+
+.theme-toggler input:checked + .theme-toggler-label:before {
+  transform: translateX(26px);
+}
+
+
+/* Adjust size for mobile devices */
+@media (max-width: $sm) {
+  .theme-toggler {
+    width: 40px;
+    height: 20px;
+  }
+
+  .theme-toggler-label,
+  .theme-toggler-label:before {
+    border-radius: 20px;
+  }
+
+  .theme-toggler-label:before {
+    height: 16px;
+    width: 16px;
+  }
+
+  .theme-toggler input:checked + .theme-toggler-label:before {
+    transform: translateX(20px);
+  }
+}
+
+/* Adjust size for tablets */
+@media (min-width: $sm) and (max-width: $lg) {
+  .theme-toggler {
+    width: 45px;
+    height: 22px;
+  }
+
+  .theme-toggler-label,
+  .theme-toggler-label:before {
+    border-radius: 22px;
+  }
+
+  .theme-toggler-label:before {
+    height: 18px;
+    width: 18px;
+  }
+
+  .theme-toggler input:checked + .theme-toggler-label:before {
+    transform: translateX(23px);
+  }
+}

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./contactForm.scss";
 import validationSchema from "../../../utils/functions/validationSchema";
 import * as Yup from "yup";
+import { ThemeContext } from "../../../utils/context/themeContext";
 
 interface FormValues {
   Name: string;
@@ -67,8 +68,10 @@ const ContactForm = () => {
 
   const { Name, Email, Subject, Message } = formData;
 
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={`form ${theme}`}>
       <div className="form-field">
         <input
           type="text"

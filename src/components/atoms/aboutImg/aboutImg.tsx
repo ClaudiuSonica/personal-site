@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../utils/context/themeContext";
 import "./aboutImg.scss";
 
 const AboutImg = () => {
+
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <div className="about-img">
+    <div className={`about-img ${theme}`}>
       <img src="/assets/about.jpg" alt="pc build for software development" />
       <div className="circle-text">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

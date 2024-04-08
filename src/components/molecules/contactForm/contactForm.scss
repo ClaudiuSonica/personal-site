@@ -1,6 +1,6 @@
 @import "../../../sass/variables";
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -77,12 +77,43 @@ form {
     border-radius: 0.5rem;
     padding: 1rem;
     font-size: 1.5rem;
-    color: $black;
+    color: $darkgray;
     cursor: pointer;
     font-family: $ff-title;
 
     @media (max-width: $md) {
       font-size: 1rem;
     }
+  }
+}
+
+.form.dark {
+  .form-field {
+    input {
+      background-color: $darkgray;
+      color: $white;
+
+      &::placeholder {
+        color: $lightgray;
+      }
+    }
+
+    textarea {
+      background-color: $darkgray;
+      color: $white;
+
+      &::placeholder {
+        color: $lightgray;
+      }
+    }
+
+    .error-message {
+      color: red;
+    }
+  }
+
+  button {
+    background-color: $darkgray;
+    color: $white;
   }
 }

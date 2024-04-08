@@ -8,6 +8,7 @@
   font-family: $ff-text;
   font-weight: bold;
   width: 45ch;
+  color: $darkgray;
 
   @media (max-width: $lg) {
     font-size: 1.8rem;
@@ -20,6 +21,10 @@
   @media (max-width: $sm) {
     font-size: 1.4rem;
   }
+}
+
+.description.dark {
+  color: $lightgray;
 }
 
 .aboutMe-description {

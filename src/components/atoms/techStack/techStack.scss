@@ -13,7 +13,8 @@
     font-weight: 600;
     margin-right: 2rem;
     width: 16rem;
-    background-color: $white;
+    background-color: $lightergray;
+    color: $darkgray;
     padding-block: 0.5rem;
     padding-left: 6.5rem;
     z-index: 100;
@@ -51,6 +52,19 @@
     &--item {
       width: 3.5rem;
       margin-right: 2rem;
+    }
+  }
+}
+
+.tech-stack--container.dark {
+  .tech-stack--text {
+    background-color: $darkgray;
+    color: $lightgray;
+  }
+
+  .tech-stack {
+    &--item {
+      filter: invert(1);
     }
   }
 }

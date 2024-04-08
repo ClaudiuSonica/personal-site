@@ -1,6 +1,16 @@
 @import "./sass/variables";
 
 body {
-  background-color: $white;
+  background-color: $lightergray;
   font-family: $ff-text;
+}
+
+.main--content {
+  background-color: $lightergray;
+  color: $darkgray;
+}
+
+.main--content.dark {
+  background-color: $darkgray;
+  color: $lightergray;
 }

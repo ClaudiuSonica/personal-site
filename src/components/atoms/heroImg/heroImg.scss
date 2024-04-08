@@ -8,12 +8,16 @@
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid black;
+  border: 4px solid $darkgray;
   animation: blobAnimation 12s infinite linear alternate;
 
-  @media (max-width: $lg) {
+  @media (max-width: $xl) {
     display: none;
   }
+}
+
+.blob.dark {
+  border-color: $lightgray;
 }
 
 @keyframes blobAnimation {

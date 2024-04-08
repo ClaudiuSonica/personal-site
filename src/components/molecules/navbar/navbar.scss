@@ -7,6 +7,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   gap: 1.3rem;
+  color: $darkgray;
 
   @media (max-width: $md) {
     font-size: 1.6rem;
@@ -17,4 +18,8 @@
     font-size: 1.4rem;
     gap: 0.8rem;
   }
+}
+
+.navbar.dark {
+  color: $lightgray;
 }

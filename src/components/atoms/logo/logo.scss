@@ -6,7 +6,7 @@
   justify-content: center;
 
   &--name {
-    color: $black;
+    color: $darkgray;
     font-size: 3rem;
     font-family: $ff-logo;
 
@@ -39,5 +39,15 @@
     @media (max-width: $sm) {
       font-size: 2rem;
     }
+  }
+}
+
+.logo.dark {
+  .logo--name {
+    color: $lightgray;
+  }
+
+  .logo--symbol {
+    color: $accent;
   }
 }

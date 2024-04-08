@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../utils/context/themeContext";
 import "./project.scss";
 import githubPic from "/assets/github.svg";
 import linkPic from "/assets/link.png";
@@ -11,9 +13,12 @@ interface ProjectProps {
   technologies: string[];
 }
 
-const Project: React.FC<ProjectProps> = ({ name, image, description, link, github, technologies}) => {
+const Project: React.FC<ProjectProps> = ({ name, image, description, link, github, technologies }) => {
+  
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <div className="project-details--item">
+    <div className={`project-details--item ${theme}`}>
       <div className="project-details--item__img">
         <img src={image} alt={name} />
       </div>

@@ -9,10 +9,14 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: $white;
+  background-color: $lightergray;
   cursor: pointer;
 
   @media (max-width: $sm) {
     position: static;
   }
+}
+
+.header.dark {
+  background-color: $darkgray;
 }
