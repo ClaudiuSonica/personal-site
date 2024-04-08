@@ -22,7 +22,7 @@ const AboutImg = () => {
             fontSize="12"
             fontWeight="bold"
             fill="$000">
-            <textPath id="textPath" href="#circlePath">FRONT-END WEB DEVELOPMENT</textPath>
+            <textPath id="textPath" href="#circlePath">FRONT-END WEB DEVELOPMENT </textPath>
           </text>
         </svg>
       </div>

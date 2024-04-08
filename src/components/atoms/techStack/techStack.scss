@@ -26,7 +26,13 @@
       width: 20rem;
     }
 
-    @media (max-width: $lg) {
+    @media (max-width: $md) {
+      width: 14rem;
+      right: 4rem;
+      padding-left: 4rem;
+    }
+
+    @media (max-width: $sm) {
       right: 2rem;
       padding-left: 2rem;
       width: 12.5rem;
