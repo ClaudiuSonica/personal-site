@@ -3,14 +3,10 @@
 body {
   background-color: $lightergray;
   font-family: $ff-text;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .main--content {
   background-color: $lightergray;
   color: $darkgray;
-}
-
-.main--content.dark {
-  background-color: $darkgray;
-  color: $lightergray;
 }

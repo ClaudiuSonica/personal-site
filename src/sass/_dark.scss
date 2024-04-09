@@ -1,55 +1,72 @@
+.main--content.dark {
+  background-color: $darkgray;
+  color: $lightergray;
+  transition: all 0.5s ease;
+}
+
 .about-description.dark {
   color: $lightgray;
+  transition: all 0.5s ease;
 }
 
 .about-img.dark {
   .circle-text {
     background-color: $darkgray;
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 
   .circle-text text {
     fill: $lightgray;
+    transition: all 0.5s ease;
   }
 }
 
 .description.dark {
   color: $lightgray;
+  transition: all 0.5s ease;
 }
 
 .blob.dark {
   border-color: $lightgray;
+  transition: all 0.5s ease;
 }
 
 .logo.dark {
   .logo--name {
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 
   .logo--symbol {
     color: $accent;
+    transition: all 0.5s ease;
   }
 }
 
 .main-title.dark {
   color: $lightgray;
+  transition: all 0.5s ease;
 }
 
 .page-title.dark {
   h2 {
     color: $lightblue;
+    transition: all 0.5s ease;
   }
 }
 
 .project-details--item.dark {
   background-color: $gray;
   color: $lightgray;
+  transition: all 0.5s ease;
 }
 
 .socials.dark {
   & a {
     & img {
       filter: invert(1);
+      transition: all 0.5s ease;
     }
   }
 }
@@ -58,11 +75,13 @@
   .tech-stack--text {
     background-color: $darkgray;
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 
   .tech-stack {
     &--item {
       filter: invert(1);
+      transition: all 0.5s ease;
     }
   }
 }
@@ -72,18 +91,22 @@
     input {
       background-color: $gray;
       color: $lightgray;
+      transition: all 0.5s ease;
 
       &::placeholder {
         color: $lightgray;
+        transition: all 0.5s ease;
       }
     }
 
     textarea {
       background-color: $gray;
       color: $lightgray;
+      transition: all 0.5s ease;
 
       &::placeholder {
         color: $lightgray;
+        transition: all 0.5s ease;
       }
     }
 
@@ -95,23 +118,27 @@
   button {
     background-color: $gray;
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 }
 
 .extra.open {
   .extra-toggle.dark {
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 }
 
 .extra-menu.dark {
   .menu-item {
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 }
 
 .navbar.dark {
   color: $lightgray;
+  transition: all 0.5s ease;
 }
 
 .contact-wrapper.dark {
@@ -120,10 +147,12 @@
       & div {
         & p {
           color: $lightgray;
+          transition: all 0.5s ease;
         }
 
         & img {
           filter: invert(1);
+          transition: all 0.5s ease;
         }
       }
     }
@@ -132,24 +161,29 @@
 
 .footer.dark {
   background-color: $darkgray;
+  transition: all 0.5s ease;
 
   .footer__text {
     span {
       color: $lightergray;
+      transition: all 0.5s ease;
     }
   }
 }
 
 .header.dark {
   background-color: $darkgray;
+  transition: all 0.5s ease;
 }
 
 #notfound.dark {
   background-color: $darkgray;
   color: $lightergray;
+  transition: all 0.5s ease;
 
   .notfound .notfound-bg > div {
     background: $gray;
+    transition: all 0.5s ease;
 
     &:nth-child(1) {
       -webkit-box-shadow: 5px 5px 0px 0px $lightgray;
@@ -170,9 +204,11 @@
   a {
     background: $lightgray;
     color: $darkgray;
+    transition: all 0.5s ease;
   }
 
   h1, h2 {
     color: $lightgray;
+    transition: all 0.5s ease;
   }
 }
