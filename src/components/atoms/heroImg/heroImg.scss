@@ -16,10 +16,6 @@
   }
 }
 
-.blob.dark {
-  border-color: $lightgray;
-}
-
 @keyframes blobAnimation {
   0%, 100% {
     border-radius: 50% 40% 60% 50%;

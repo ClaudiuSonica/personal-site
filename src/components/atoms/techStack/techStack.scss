@@ -56,19 +56,6 @@
   }
 }
 
-.tech-stack--container.dark {
-  .tech-stack--text {
-    background-color: $darkgray;
-    color: $lightgray;
-  }
-
-  .tech-stack {
-    &--item {
-      filter: invert(1);
-    }
-  }
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);

@@ -1,9 +1,11 @@
 import './extra.scss';
 import ThemeToggler from '../../atoms/themeToggler/themeToggler';
-import { useState, useEffect, useRef } from 'react';
-import arrow from '../../../../public/assets/arrow.svg';
+import { useState, useEffect, useRef, useContext } from 'react';
+import { ThemeContext } from '../../../utils/context/themeContext';
+import cv from '../../../../public/cv/cv.pdf';
 
 const Extra = () => {
+  const { theme } = useContext(ThemeContext);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,25 +24,25 @@ const Extra = () => {
     };
   }, []);
 
+  const capitalizedTheme = theme.charAt(0).toUpperCase() + theme.slice(1);
+
   return (
     <div className={`extra ${isOpen ? 'open' : ''}`} ref={ref}>
-      <div className="extra-toggle" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? 'Close' : 'Menu'}
+      <div className={`extra-toggle ${theme}`} onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? 'x' : '+'}
       </div>
       {isOpen && (
-        <div className="extra-menu">
+        <div className={`extra-menu ${theme}`}>
           <div className="menu-item">
+            <span>{capitalizedTheme} theme</span>
             <ThemeToggler />
           </div>
           <div className="menu-item">
-            <a href="#home">
-              <img src={arrow} alt="Go to top" />
-            </a>
+            <a href="#home">Home</a>
           </div>
           <div className="menu-item">
-            <a href="/path/to/your/cv.pdf" download>
-              <span>CV</span>
-              <img src={arrow} alt="download" style={{transform: "rotate(180deg)"}} />
+            <a href={cv} download>
+              <span>Download CV</span>
             </a>
           </div>
         </div>

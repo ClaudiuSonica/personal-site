@@ -1,0 +1,178 @@
+.about-description.dark {
+  color: $lightgray;
+}
+
+.about-img.dark {
+  .circle-text {
+    background-color: $darkgray;
+    color: $lightgray;
+  }
+
+  .circle-text text {
+    fill: $lightgray;
+  }
+}
+
+.description.dark {
+  color: $lightgray;
+}
+
+.blob.dark {
+  border-color: $lightgray;
+}
+
+.logo.dark {
+  .logo--name {
+    color: $lightgray;
+  }
+
+  .logo--symbol {
+    color: $accent;
+  }
+}
+
+.main-title.dark {
+  color: $lightgray;
+}
+
+.page-title.dark {
+  h2 {
+    color: $lightblue;
+  }
+}
+
+.project-details--item.dark {
+  background-color: $gray;
+  color: $lightgray;
+}
+
+.socials.dark {
+  & a {
+    & img {
+      filter: invert(1);
+    }
+  }
+}
+
+.tech-stack--container.dark {
+  .tech-stack--text {
+    background-color: $darkgray;
+    color: $lightgray;
+  }
+
+  .tech-stack {
+    &--item {
+      filter: invert(1);
+    }
+  }
+}
+
+.form.dark {
+  .form-field {
+    input {
+      background-color: $gray;
+      color: $lightgray;
+
+      &::placeholder {
+        color: $lightgray;
+      }
+    }
+
+    textarea {
+      background-color: $gray;
+      color: $lightgray;
+
+      &::placeholder {
+        color: $lightgray;
+      }
+    }
+
+    .error-message {
+      color: red;
+    }
+  }
+
+  button {
+    background-color: $gray;
+    color: $lightgray;
+  }
+}
+
+.extra.open {
+  .extra-toggle.dark {
+    color: $lightgray;
+  }
+}
+
+.extra-menu.dark {
+  .menu-item {
+    color: $lightgray;
+  }
+}
+
+.navbar.dark {
+  color: $lightgray;
+}
+
+.contact-wrapper.dark {
+  & .contact-wrapper--content {
+    &--details {
+      & div {
+        & p {
+          color: $lightgray;
+        }
+
+        & img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}
+
+.footer.dark {
+  background-color: $darkgray;
+
+  .footer__text {
+    span {
+      color: $lightergray;
+    }
+  }
+}
+
+.header.dark {
+  background-color: $darkgray;
+}
+
+#notfound.dark {
+  background-color: $darkgray;
+  color: $lightergray;
+
+  .notfound .notfound-bg > div {
+    background: $gray;
+
+    &:nth-child(1) {
+      -webkit-box-shadow: 5px 5px 0px 0px $lightgray;
+      box-shadow: 5px 5px 0px 0px $lightgray;
+    }
+
+    &:nth-child(2) {
+      -webkit-box-shadow: 5px 5px 0px 0px $lightgray;
+      box-shadow: 5px 5px 0px 0px $lightgray;
+    }
+
+    &:nth-child(3) {
+      -webkit-box-shadow: 5px 5px 0px 0px $lightgray;
+      box-shadow: 5px 5px 0px 0px $lightgray;
+    }
+  }
+
+  a {
+    background: $lightgray;
+    color: $darkgray;
+  }
+
+  h1, h2 {
+    color: $lightgray;
+  }
+}

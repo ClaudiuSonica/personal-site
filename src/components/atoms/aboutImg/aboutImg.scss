@@ -82,14 +82,3 @@
     transform: rotate(360deg);
   }
 }
-
-.about-img.dark {
-  .circle-text {
-    background-color: $darkgray;
-    color: $lightgray;
-  }
-
-  .circle-text text {
-    fill: $lightgray;
-  }
-}

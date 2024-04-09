@@ -86,34 +86,3 @@
     }
   }
 }
-
-.form.dark {
-  .form-field {
-    input {
-      background-color: $darkgray;
-      color: $white;
-
-      &::placeholder {
-        color: $lightgray;
-      }
-    }
-
-    textarea {
-      background-color: $darkgray;
-      color: $white;
-
-      &::placeholder {
-        color: $lightgray;
-      }
-    }
-
-    .error-message {
-      color: red;
-    }
-  }
-
-  button {
-    background-color: $darkgray;
-    color: $white;
-  }
-}

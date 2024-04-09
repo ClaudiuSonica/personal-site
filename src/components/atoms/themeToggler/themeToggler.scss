@@ -36,11 +36,11 @@
 }
 
 .theme-toggler input:checked + .theme-toggler-label {
-  background-color: $lightblue;
+  background-color: $lightergray;
 }
 
 .theme-toggler input:focus + .theme-toggler-label {
-  box-shadow: 0 0 1px $lightblue; 
+  box-shadow: 0 0 1px $lightergray; 
 }
 
 .theme-toggler input:checked + .theme-toggler-label:before {

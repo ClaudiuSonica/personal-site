@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../utils/context/themeContext";
 import "./pageNotFound.scss";
 
 const PageNotFound = () => {
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <div id="notfound">
+    <div id="notfound" className={theme}>
       <div className="notfound">
         <div className="notfound-bg">
           <div></div>

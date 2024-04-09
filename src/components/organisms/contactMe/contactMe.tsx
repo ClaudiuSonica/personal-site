@@ -6,10 +6,15 @@ import location from "/assets/location.png";
 import mail from "/assets/mail.png";
 import phone from "/assets/phone.png";
 import ContactForm from "../../molecules/contactForm/contactForm";
+import { ThemeContext } from "../../../utils/context/themeContext";
+import { useContext } from "react";
 
 const ContactMe = () => {
+
+  const {theme} = useContext(ThemeContext); 
+
   return (
-    <div className="contact-wrapper">
+    <div className={`contact-wrapper ${theme}`}>
       <div className="contact-wrapper--header">
         <PageTitle title="Contact" />
         <Description
