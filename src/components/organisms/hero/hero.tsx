@@ -14,7 +14,7 @@ const Hero = () => {
             <MainTitle />
             <Description
               className="description"
-              text="Hello. I'm Claudiu Sonica. An self-taught ambitious Front-End Developer based in Mures, Romania. 📌"
+              text="Hello. I'm Claudiu Sonica. A self-taught ambitious Front-End Developer based in Mures, Romania. 📌"
             />
             <Socials />
           </div>
